@@ -1,0 +1,177 @@
+{
+  "code": "200",
+  "msg": "成功",
+  "obj": {
+    "data": [
+      {
+        "empEmail": "923107891@qq.com",
+        "empName": "孙悟空",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "超级会员",
+        "score": "2012-12-10",
+        "deptId": "1",
+        "department": {
+          "deptId": "1",
+          "deptName": "正常使用"
+        },
+        " LAY_CHECKED": true
+      },
+      {
+       " LAY_CHECKED": true,
+        "empEmail": "923107891@qq.com",
+        "empName": "金角大王",
+        "age": "500",
+        "gender": "男",
+        "deptId": "2",
+        "hireDate": "超级会员",
+        "score": "2012-12-10",
+        "department": {
+          "deptId": "2",
+          "deptName": "正常使用"
+        }
+      },{
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "银角大王",
+        "age": "500",
+        "gender": "男",
+        "deptId": "3",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "department": {
+          "deptId": "3",
+          "deptName": "限制使用"
+        }
+      },{
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "太上老君",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "4",
+        "department": {
+          "deptId": "4",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "唐僧",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "5",
+        "department": {
+          "deptId": "5",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "沙和尚",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "6",
+        "department": {
+          "deptId": "6",
+          "deptName": "正常使用"
+        }
+      }, {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "猪八戒",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "7",
+        "department": {
+          "deptId": "7",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "太上老君",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "8",
+        "department": {
+          "deptId": "8",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "玉皇大帝",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "9",
+        "department": {
+          "deptId": "9",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "王母娘娘",
+        "age": "500",
+        "gender": "女",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "10",
+        "department": {
+          "deptId": "10",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "牛魔王",
+        "age": "500",
+        "gender": "男",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "11",
+        "department": {
+          "deptId": "11",
+          "deptName": "正常使用"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "923107891@qq.com",
+        "empName": "铁杉公主",
+        "age": "500",
+        "gender": "女",
+        "hireDate": "钻石会员",
+        "score": "2012-12-10",
+        "deptId": "12",
+        "department": {
+          "deptId": "12",
+          "deptName": "正常使用"
+        }
+      }
+    ],
+    "count": 12,
+    "page":2,
+    "size":5
+  }
+
+}

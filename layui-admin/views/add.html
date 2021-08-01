@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<div class="layui-container">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input type="text" id="empName" name="empName" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户邮箱</label>
+            <div class="layui-input-block">
+                <input type="text"id="empEmail" name="age" required  lay-verify="required" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户状态</label>
+            <div class="layui-input-block">
+                <select id="deptId" name="deptId" >
+                    <option value="">请选择</option>
+                    <option value="0">正常使用</option>
+                    <option value="1">限制使用</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户等级</label>
+            <div class="layui-input-block">
+                <select name="deptId"id="t">
+                    <option value="">请选择</option>
+                    <option value="2">超级会员</option>
+                    <option value="3">钻石会员</option>
+                    <option value="4">黄金会员</option>
+                    <option value="5">白银会员</option>
+                    <option value="6">高级会员</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户性别</label>
+            <div class="layui-input-block">
+                <input type="radio" name="gender" value="男" title="男">
+                <input type="radio" name="gender" value="女" title="女" checked>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">登录时间</label>
+            <div class="layui-input-block">
+                <input id="hireDate" type="text" name="hireDate" placeholder="年-月-日" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="add">更新</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use(['form','laydate','layer'], function(){
+        var laydate = layui.laydate;
+        var form =layui.form;
+        var $=layui.jquery;
+        var layer=layui.layer;
+        form.on('submit(formDemo)',function (obj) {
+            console.log("===>>>",obj.field);
+            $.post("../json/data.json",obj.field,function (d) {
+                if(d.code!=200){
+                    layer.msg(d.msg);
+                }else {
+                    var  index =parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                }
+            })
+            return false;
+        });
+        laydate.render({
+            elem: "#hireDate",
+            trigger: "click"
+        });
+
+//         $.getJSON("../json/yuangong.json",function (d) {
+//             // console.log(d);
+// if (d.code!=200){
+//     layer.msg(d.msg);
+// }else {
+//     var list = d.data;
+//     var str = "<option value=''></option>";
+//     for (var i = 0; i < list.length; i++) {
+//             str+= "<option selected value=\"" + list[i].id + "\">" + list[i].name + "</option>"
+//     }
+//     console.log(str);
+//     $("#deptId").html(str);
+//     form.render("select");
+// }
+//         })
+    });
+</script>
+</body>
+</html>

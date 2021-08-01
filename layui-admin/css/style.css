@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background-color:#F6F8F9;
+    position: absolute;
+    overflow: hidden;
+}
+.box-a{
+    width:130px;
+    height: 150px;
+    margin:0 auto;
+    top: 300px;
+    position: relative;
+}
+.box-a span{
+    width: 130px;
+    height: 20px;
+    display: block;
+    font-size:20px;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+}
+.a{
+ position: relative;
+    top: 30px;
+    margin-left: 100px;
+}

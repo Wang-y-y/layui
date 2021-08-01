@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "首页",
+      "imgurl": "../img/8.png",
+      "src": "../index/indexa.html",
+      "children": []
+    },
+    {
+      "id": "2",
+      "name": "系统设置",
+      "imgurl": "../img/5.png",
+      "children": [
+        {
+          "id": "3",
+          "name": "模块管理",
+          "children": [],
+          "src": "../views/tree.html"
+        }
+        ]
+    },
+    {
+      "id": "4",
+      "name": "用户中心",
+      "imgurl": "../img/7.png",
+      "tt": "../views/shouye.html",
+      "children": [
+        {
+          "id": "5",
+          "name": "用户中心",
+          "children": [],
+          "src": "../views/index.html"
+        },
+        {
+          "id": "6",
+          "name": "会员等级",
+          "children": [],
+          "src": "../views/huiyuan.html"
+
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "其他页面",
+      "imgurl": "../img/4.png",
+      "tt": "../views/shouye.html",
+      "children": [
+        {
+          "id": "8",
+          "name": "404页面",
+          "children": [],
+          "src": "../a/a.html"
+        },
+        {
+          "id": "9",
+          "name": "文章列表",
+          "children": [],
+          "src": "https://www.baidu.com"
+        },
+        {
+          "id": "10",
+          "name": "图片管理",
+          "children": [],
+          "src": "../views/imglay.html"
+        },
+        {
+          "id": "11",
+          "name": "轮播",
+          "children": [],
+          "src": "../views/lunbo.html"
+        }
+      ]
+    }
+  ]
+}

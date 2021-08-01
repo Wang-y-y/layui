@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/viwesa-style.css">
+</head>
+<body>
+<div class="layui-container">
+  <div class="layui-row">
+    <div  class="layui-col-md7">
+        <div class="layui-col-md3 box">
+            <div class="smallimg">
+                <img src="../img/libg01.png" alt="">
+                <span class="a">10</span>
+                <span class="b">今日待办</span>
+            </div>
+            <div class="bigimg">
+                <img src="../img/libg04.png" alt="">
+                <span class="c">联勤联动</span>
+                <span class="d">16</span>
+            </div>
+        </div>
+        <div class="layui-col-md3 box">
+            <div class="smallimg">
+                <img src="../img/libg02.png" alt="">
+                <span class="aa">6</span>
+                <span class="bb">已办</span>
+            </div>
+            <div class="bigimg">
+                <img src="../img/libg06.png" alt="">
+                <span class="c">问题数据</span>
+                <span class="d">0</span>
+            </div>
+        </div>
+        <div class="layui-col-md3 box">
+            <div class="smallimg">
+                <img src="../img/libg03.png" alt="">
+                <span class="aaa">10</span>
+                <span class="bb">未办</span>
+            </div>
+            <div class="bigimg">
+                <img src="../img/libg05.png" alt="">
+                <span class="c">预警信息</span>
+                <span class="d">0</span>
+            </div>
+        </div>
+    </div>
+    <div  class="layui-col-md5 right">
+        <div class="chart"></div>
+    </div>
+  </div>
+    <div class="dd">
+        <table class="layui-table" id="doem" lay-filter="test" lay-even lay-skin="nob">
+        </table>
+    </div>
+</div>
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#doem'
+            ,url: '../json/shouye.json' //数据接口
+            ,page: true ,//开启分页
+            request: {
+                pageName: 'page' //页码的参数名称，默认：page
+                ,limitName: 'limit' //每页数据量的参数名，默认：limit
+            },
+            parseData:function(res){
+                console.log(res)
+                return{
+                    code:res.code==200?0:500,
+                    msg:res.msg,
+                    count:res.count,
+                    data:res.obj.data
+                }
+            },
+                limit:5,
+                limits:[5,10,15,20,25]
+            ,cols: [[ //表头
+                {field: 'id', title: '序号', width:150, sort: true, fixed: 'left'}
+                ,{field: 'username', title: '呈送用户', width:180}
+                ,{field: 'sex', title: '待办用户', width:180}
+                ,{field: 'sign', title: '代办内容', width: 250}
+                ,{field: 'time', title: '待办时间', width: 190}
+                ,{field: 'do', title: '操作', width: 180}
+            ]]
+        });
+
+    });
+</script>
+<script src="../admin/js/echarts.min.js"></script>
+<script src="../admin/js/chart.js"></script>
+</body>
+</html>

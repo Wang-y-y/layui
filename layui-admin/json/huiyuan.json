@@ -1,0 +1,105 @@
+{
+  "code": "0",
+  "msg": "成功",
+  "obj": {
+    "data": [
+      {
+        "empEmail": "../img/VIP-01.png",
+        "empName": "1",
+        "age": "500",
+        "gender": "倔强青铜",
+        "hireDate": "0",
+        "score": "0",
+        "deptId": "1",
+        "department": {
+          "deptId": "1",
+          "deptName": "0"
+        },
+        " LAY_CHECKED": true
+      },
+      {
+        " LAY_CHECKED": true,
+        "empEmail": "../img/VIP-02.png",
+        "empName": "2",
+        "age": "500",
+        "gender": "秩序白银",
+        "deptId": "2",
+        "hireDate": "200",
+        "score": "100",
+        "department": {
+          "deptId": "2",
+          "deptName": "500"
+        }
+      },{
+        "checked":true,
+        "empEmail": "../img/VIP-03.png",
+        "empName": "3",
+        "age": "500",
+        "gender": "荣耀黄金",
+        "deptId": "3",
+        "hireDate": "300",
+        "score": "300",
+        "department": {
+          "deptId": "3",
+          "deptName": "1000"
+        }
+      },{
+        "checked":true,
+        "empEmail": "../img/VIP-04.png",
+        "empName": "4",
+        "age": "500",
+        "gender": "尊贵铂金",
+        "hireDate": "400",
+        "score": "800",
+        "deptId": "4",
+        "department": {
+          "deptId": "4",
+          "deptName": "2000"
+        }
+      },
+      {
+        "checked":true,
+        "empEmail": "../img/VIP-05.png",
+        "empName": "5",
+        "age": "500",
+        "gender": "永恒钻石",
+        "hireDate": "500",
+        "score": "1500",
+        "deptId": "5",
+        "department": {
+          "deptId": "5",
+          "deptName": "5000"
+        }
+      },
+      {
+        "empEmail": "../img/VIP-06.png",
+        "empName": "6",
+        "age": "500",
+        "gender": "至尊星耀",
+        "hireDate": "6000",
+        "score": "3000",
+        "deptId": "6",
+        "department": {
+          "deptId": "6",
+          "deptName": "10000"
+        }
+      }, {
+        "checked":true,
+        "empEmail": "../img/VIP-07.png",
+        "empName": "7",
+        "age": "500",
+        "gender": "最强王者",
+        "hireDate": "700",
+        "score": "5000",
+        "deptId": "7",
+        "department": {
+          "deptId": "7",
+          "deptName": "35000"
+        }
+      }
+    ],
+    "count": 7
+  },
+  "page":2,
+  "limit":5
+}

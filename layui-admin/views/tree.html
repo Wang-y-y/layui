@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>树组件</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style>
+        body{
+background-color: #F5F5F5;
+        }
+        .body{
+            padding-top: 10px;
+        }
+        #test1{
+            background-color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-container body">
+    <h2>模块管理</h2>
+
+<div id="test1"></div>
+</div>
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use('tree', function(){
+        var tree = layui.tree;
+        //渲染
+        var inst1 = tree.render({
+            elem: '#test1',  //绑定元素
+            spread:true,
+            showLine:true
+            ,data: [{
+                title: '系统设置' //一级菜单
+                ,children: [{
+                    title:'模块管理',
+                    children:[{
+                        title:'模块管理1-1-1',
+                        children:[
+                            {
+                                title:"模块管理1-1-1"
+                            }, {
+                                title:"模块管理1-1-2"
+                            }
+                        ]
+                    }]
+
+                },
+                    {
+                        title:'模块管理1-1-2'
+                    }]
+            },
+                {
+                title: '用户中心' //一级菜单
+                ,children: [{
+                    title: '会员中心'
+                },
+                        {
+                            title: '会员等级'
+                        }],
+            },
+                {
+                    title: '其他页面'
+                }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

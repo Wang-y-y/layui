@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>轮播图</title>
+    <script src="../admin/js/jquery.js" type="text/javascript"></script>
+    <script src="../admin/js/lunbo.js"></script>
+    <link href="../css/lunbo.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="banner">
+    <div class="big_box">
+         <ul class="box">
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/1.png">-->
+            <!--</li>-->
+             <!--<li class="swiper-item">-->
+                <!--<img src="img/2.png" >-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/3.png" >-->
+            <!--</li>-->
+             <!--<li class="swiper-item">-->
+                <!--<img src="img/4.png" >-->
+            <!--</li>-->
+           <!--<li class="swiper-item">-->
+                <!--<img src="img/5.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/6.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/7.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/8.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/9.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/10.png" >-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/11.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/12.png">-->
+            <!--</li>-->
+            <!--<li class="swiper-item">-->
+                <!--<img src="img/14.png">-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="small_box">
+        <span class="btns lefts_btn"></span>
+        <div class="small_list">
+            <ul class="list">
+                <!--<li class="on">-->
+                    <!--<img src="img/1.png" width="100" height="50">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/2.png" width="100" height="50">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/3.png" width="100" height="50">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/4.png" width="100" height="50">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/5.png" width="100" height="50">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/6.png" width="100" height="50">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/7.png" >-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/8.png" >-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/9.png">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/10.png">-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/11.png" >-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/12.png" >-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<img src="img/13.png">-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <span class="btns rights_btn"></span>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        main.init();
+    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: "json/data.json",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         console.log(data);
+    //         data.data.forEach(item=>{
+    //             var a="<li>"+"<img src='"+item.imgurl+"'>"+ "</li>";
+    //             $(".box").append(a);
+    //             var b ="<li>"+"<img src='"+item.img+"' >"+"</li>";
+    //             $(".list").append(b);
+    //         });
+    //     }
+    // });
+    // function left_btn(){
+    //     var i;
+    //     var l = $(".small_list").find("ul li").length;
+    //     $(".small_list").find("ul li").each(function(index){
+    //         if($(this).hasClass("on")){
+    //             i = index;
+    //         }
+    //     });
+    //     i--;
+    //     if(i < 0){
+    //         i = l - 1;
+    //     }
+    //     t = i;
+    //     Img(i)
+    // }
+    // /* 右按钮 */
+    // function right_btn(){
+    //     var i;
+    //     var l = $(".small_list").find("ul li").length;
+    //     $(".small_list").find("ul li").each(function(index){
+    //         if($(this).hasClass("on")){
+    //             i = index;
+    //         }
+    //     });
+    //     i++;
+    //     if(i > l-1){
+    //         i = 0;
+    //     }
+    //     t = i;
+    //     Img(i);
+    // }
+    // /* 图片 */
+    // function Img(i) {
+    //     $(".large_box").find("ul li").eq(i).fadeIn().siblings().hide();
+    //     $(".small_list").find("ul li").eq(i).addClass("on").siblings().removeClass("on")
+    // }
+	// let n=0,time=null;
+	// $(".big_box").hover(
+	// function(){
+	// 	clearInterval(timer)
+	// },
+	// function(){
+	// 	auto()
+	// }
+	// )
+	// $(".left_btn").click(function(){
+	// 	n++;
+	// 	n=n%$(".swiper-item").length;
+	// 	$(".swiper-item").eq(n).show().siblings().hide();
+	// })
+	// $(".right_btn").click(function(){
+	// 	n--;
+	// 	n=(n+$(".swiper-item").length)%$(".swiper-item").length;
+	// 	$(".swiper-item").eq(n).show().siblings().hide();
+	// 	$(".small_list  ul li").eq(n).addClass("active").siblings().removeclass("active");
+	// })
+	// function autoPlay(){
+	// 	n++;
+	// 	n=n%$(".swiper-item").length;
+	// 	$(".swiper-item").eq(n).show().siblings().hide();
+	// 	$(".small_list ul li").eq(n).addClass("active").siblings().removeclass("active");
+	// }
+	// function auto(){
+	// timer=setInterval(autoPlay,2000)
+	// }
+	// auto()
+	// $(".small_list").on("click","ul li",function(){
+	// 	$(this).addClass("active").siblings().removeclass("active");
+	// 	$(".swiper-item").eq($(this).index()).show().siblings().hide();
+	// 	ind=$(this).index();
+	// })
+</script>
+</body>
+</html>

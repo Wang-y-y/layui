@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style>
+        .layui-table-cell{
+
+            text-align:center;
+
+            height: auto;
+
+            white-space: normal;
+
+        }
+
+        .layui-table img{
+
+            max-width:30px
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="layui-container">
+    <h2>会员等级</h2>
+    <div class="layui-row" style="border: #E8E8EA 1px solid;margin-top: 10px">
+        <div class="layui-col-md4" style="padding: 10px">
+            <button type="button" class="layui-btn" id="addEmployeeId">新增等级</button>
+        </div>
+    </div>
+    <table class="layui-table"id="doem" lay-filter="test" lay-even lay-skin="nob">
+
+    </table>
+    <!--<button type="button" id="addEmployeeId" class="layui-btn layui-btn-fluid">添加员工</button>-->
+</div>
+
+
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use(["table","layer"],function () {
+        var table = layui.table;
+        var $ = layui.$;
+        var  layer=layui.layer;
+
+        $("#addEmployeeId").click(function () {
+            layer.open({
+                type:2,
+                title:"新增等级",
+                content:"dengji.html",
+                area:["500px","500px"],
+                closeBtn:1,
+                end:function () {
+                    table.reload("tableId")
+                }
+            })
+        });
+        table.render({
+            elem:"#doem",
+            url:"../json/huiyuan.json",
+            page: true,
+            id:"tableId",
+            limit:2,
+            limits:[2,4,6,8,10],
+            cols: [[ //表头
+                {field: 'empName', title: 'ID', width:120,sort: true}
+                ,{field: 'empEmail', title: '图表展示',align:"center", width:200,templet:'<div><img  src="{{ d.empEmail }}"></div>'}
+                ,{field: 'gender', title: '等级名称',align:"center", width:150,}
+                ,{field: 'department', title: '等级值', width:150 ,sort: true,templet:function(d){
+                        return d.department.deptName;
+                    }
+                }
+                ,{field: 'hireDate', title: '默认金币',align:"center", width: 150,sort: true}
+                ,{field: 'score', title: '默认积分', width: 160,align:"center", sort: true}
+                ,{field: '', title: '当前状态', width: 200, align:"center",
+                    templet:function () {
+                        var  str=
+                            "      <input type=\"checkbox\" name=\"switch\" lay-skin=\"switch\"lay-text=\"启用|关闭\"checked>"
+                            ;
+                        return str;
+                    }}
+            ]],
+            // done: function (data, curr, count) {  //回调函数
+            //     //添加图片到表格中所有的第二个单元格里面
+            //     $('td:nth-child(1)').css({ 'font-size': '12px', 'border-right': '1px solid #CCC', 'background': 'url("../img/VIP-01.png") no-repeat', 'background-position': '113px 12px', 'background-size': '30px 14px' });
+            // },
+            parseData:function (d) {
+                return{
+                    "code": d .code==200?0:d.code,
+                    "msg": "d.msg",
+                    "count":d.obj.count,
+                    "data":d.obj.data
+                }
+            }
+            // var acyive={
+            //     del:function () {
+            //         var checkData=table.checkStatus('doem');
+            //         var data=checkData.data;
+            //         if(data.length===0){
+            //             layer.msg("请选择数据")
+            //         }
+            //     }
+            // }
+
+        })
+    })
+</script>
+</body>
+</html>
